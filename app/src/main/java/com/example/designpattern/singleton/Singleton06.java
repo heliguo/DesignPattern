@@ -6,7 +6,7 @@ package com.example.designpattern.singleton;
  */
 public class Singleton06 {
 
-    private static Singleton06 INSTANCE;
+    private volatile static Singleton06 INSTANCE;//防止指令重排
 
     private Singleton06() {
 
