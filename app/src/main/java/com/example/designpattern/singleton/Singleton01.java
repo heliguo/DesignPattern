@@ -2,7 +2,7 @@ package com.example.designpattern.singleton;
 
 /**
  * @author lgh on 2020/5/25 20:04
- * @description 饿汉模式
+ * @description 饿汉模式 可保证单例
  * 类加载到内存后，就实例化一个单例，JVM保证线程安全
  * 唯一缺点：不管用到与否，类装载时就完成实例化
  */
@@ -14,7 +14,7 @@ public class Singleton01 {
     private Singleton01() {
 
 //        try {
-//            Class<?> singleton01 = Class.forName("Singleton01");
+//            Class<?> singleton01 = Class.forName("Singleton01");//会初始化
 //        } catch (ClassNotFoundException e) {
 //            e.printStackTrace();
 //        }

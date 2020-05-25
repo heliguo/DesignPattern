@@ -2,7 +2,7 @@ package com.example.designpattern.singleton;
 
 /**
  * @author lgh on 2020/5/25 20:13
- * @description 同Singleton01
+ * @description 同Singleton01 可以保证单例
  */
 public class Singleton02 {
 

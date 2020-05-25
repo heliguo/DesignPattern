@@ -2,7 +2,7 @@ package com.example.designpattern.singleton;
 
 /**
  * @author lgh on 2020/5/25 20:13
- * @description 懒汉模式
+ * @description 懒汉模式 不能保证单例
  * 线程不安全
  */
 public class Singleton03 {
