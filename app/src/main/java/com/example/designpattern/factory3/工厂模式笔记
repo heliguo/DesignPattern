@@ -1,0 +1,16 @@
+1、简单工厂
+2、静态工厂
+3、工厂方法 FactoryMethod
+4、抽象工厂
+5、spring IOC
+定义：任何可以产生对象的方法或类都可以称之为工厂，单例也可称为工厂（静态工厂）
+  优点：灵活控制生产过程；权限、修饰、日志...
+
+
+  抽象工厂 便于某一组产品的成组扩展（一个类型组）
+     如：{food、vehicle、weapon}可方便扩展为 {bread、car、Ak47}、{Mushroom、MagicStick、Broom}
+         或其他属于{food、vehicle、weapon}一组的产品
+  工厂方法 便于单一产品的扩展
+    如 food     ——> bread、Mushroom ......
+       vehicle  ——> car、plane ......
+       weapon   ——> Ak47、Broom .....

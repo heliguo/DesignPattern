@@ -1,4 +1,4 @@
-package com.example.designpattern.strategy;
+package com.example.designpattern.strategy2;
 
 /**
  * @author lgh on 2020/5/25 20:52

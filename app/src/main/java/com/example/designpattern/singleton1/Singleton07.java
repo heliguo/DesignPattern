@@ -1,4 +1,4 @@
-package com.example.designpattern.singleton;
+package com.example.designpattern.singleton1;
 
 /**
  * @author lgh on 2020/5/25 20:13
