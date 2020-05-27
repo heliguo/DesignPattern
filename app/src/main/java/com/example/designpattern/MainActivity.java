@@ -5,6 +5,15 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.designpattern.chainofresponsibility8.FilterChain;
+import com.example.designpattern.chainofresponsibility8.IFilter;
+import com.example.designpattern.chainofresponsibility8.Msg;
+import com.example.designpattern.chainofresponsibility8.NumFilter;
+import com.example.designpattern.chainofresponsibility8.SensitiveFilter;
+import com.example.designpattern.decorator7.AbstractBattercake;
+import com.example.designpattern.decorator7.BattercakeDec;
+import com.example.designpattern.decorator7.EggBattercakeDecorator;
+import com.example.designpattern.decorator7.SausageDecorator;
 import com.example.designpattern.factory3.Car;
 import com.example.designpattern.factory3.CarFactory;
 import com.example.designpattern.factory3.Moveable;
@@ -23,7 +32,9 @@ import com.example.designpattern.strategy2.Dog;
 import com.example.designpattern.strategy2.DogComparator;
 import com.example.designpattern.strategy2.Sorter;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -75,6 +86,42 @@ public class MainActivity extends AppCompatActivity {
         magicFactory.createFood().printName();
         magicFactory.creatVehicle().go();
         magicFactory.createWeapon().shoot();
+
+        //装饰者
+        AbstractBattercake abstractBattercake;
+        abstractBattercake = new BattercakeDec();
+        abstractBattercake = new EggBattercakeDecorator(abstractBattercake);
+        abstractBattercake = new SausageDecorator(abstractBattercake);
+
+        //责任链模式,处理敏感词汇
+        Msg msg = new Msg();
+        msg.setMsg("123456789敏感词汇");
+
+        String r = msg.getMsg();
+        r = r.replace("1", "a");
+        r = r.replace("2", "b");
+        new NumFilter().doFilter(r);
+        new SensitiveFilter().doFilter(r);
+
+        List<IFilter> filters = new ArrayList<>();
+        filters.add(new NumFilter());
+        filters.add(new SensitiveFilter());
+
+        for (IFilter filter : filters) {
+            filter.doFilter(r);
+        }
+
+        FilterChain fc = new FilterChain();
+//        fc.add(new NumFilter());
+//        fc.add(new SensitiveFilter());
+        //链式调用
+        fc.add(new NumFilter()).add(new SensitiveFilter());
+        FilterChain fc2 = new FilterChain();
+        fc2.add(new NumFilter());
+        fc.add(fc2);
+
+        fc.doFilter(r);
+
 
     }
 }
