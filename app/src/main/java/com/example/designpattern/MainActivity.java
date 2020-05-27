@@ -122,6 +122,5 @@ public class MainActivity extends AppCompatActivity {
 
         fc.doFilter(r);
 
-
     }
 }
