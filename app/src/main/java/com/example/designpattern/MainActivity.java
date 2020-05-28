@@ -10,6 +10,10 @@ import com.example.designpattern.chainofresponsibility8.IFilter;
 import com.example.designpattern.chainofresponsibility8.Msg;
 import com.example.designpattern.chainofresponsibility8.NumFilter;
 import com.example.designpattern.chainofresponsibility8.SensitiveFilter;
+import com.example.designpattern.composite10.BranchNode;
+import com.example.designpattern.composite10.LeafNode;
+import com.example.designpattern.composite10.Node;
+import com.example.designpattern.composite10.TreePrint;
 import com.example.designpattern.decorator7.AbstractBattercake;
 import com.example.designpattern.decorator7.BattercakeDec;
 import com.example.designpattern.decorator7.EggBattercakeDecorator;
@@ -42,13 +46,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //策略模式
+        /**
+         * 策略模式
+         */
         Dog[] dogs = {new Dog(5), new Dog(3), new Dog(1)};
         Sorter<Dog> sorter = new Sorter<>();
         DogComparator dogMyComparator = new DogComparator();
         sorter.sort(dogs, dogMyComparator);
         Log.e("TAG", "onCreate: " + Arrays.toString(dogs));
-        //工厂模式
+        /**
+         * 工厂方法
+         */
         Moveable moveable = new Car();
         Moveable moveable1 = new Plane();
         moveable.go();
@@ -63,7 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
         Moveable m1 = new CarFactory().creat();
         m1.go();
-        //抽象工厂
+
+        /**
+         * 抽象工厂
+         */
+
         Car1 car1 = new Car1();
         car1.go();
         Ak47 ak47 = new Ak47();
@@ -87,13 +99,17 @@ public class MainActivity extends AppCompatActivity {
         magicFactory.creatVehicle().go();
         magicFactory.createWeapon().shoot();
 
-        //装饰者
+        /**
+         * 装饰者
+         */
         AbstractBattercake abstractBattercake;
         abstractBattercake = new BattercakeDec();
         abstractBattercake = new EggBattercakeDecorator(abstractBattercake);
         abstractBattercake = new SausageDecorator(abstractBattercake);
 
-        //责任链模式,处理敏感词汇
+        /**
+         * 责任链模式,处理敏感词汇
+         */
         Msg msg = new Msg();
         msg.setMsg("123456789敏感词汇");
 
@@ -122,5 +138,28 @@ public class MainActivity extends AppCompatActivity {
 
         fc.doFilter(r);
 
+        /**
+         * 组合模式
+         */
+        BranchNode root = new BranchNode("root");
+        BranchNode chapter1 = new BranchNode("chapter1");
+        BranchNode chapter2 = new BranchNode("chapter2");
+        Node c11 = new LeafNode("c11");
+        Node c12 = new LeafNode("c12");
+        BranchNode b21 = new BranchNode("section21");
+        Node c211 = new LeafNode("c211");
+        Node c212 = new LeafNode("c212");
+
+        root.add(chapter1);
+        root.add(chapter2);
+
+        chapter1.add(c11);
+        chapter1.add(c12);
+
+        chapter2.add(b21);
+        b21.add(c211);
+        b21.add(c212);
+
+        TreePrint.print(root,0);
     }
 }

@@ -19,7 +19,7 @@ public class FilterChain implements IFilter {
     public boolean doFilter(String msg) {
         for (IFilter filter : mFilters) {
             if (!filter.doFilter(msg)) {
-                return false;
+                return false;//跳出循环，不在执行
             }
         }
         return true;
