@@ -32,6 +32,9 @@ import com.example.designpattern.factory3.abstractfactory.MagicFactory;
 import com.example.designpattern.factory3.abstractfactory.MagicStick;
 import com.example.designpattern.factory3.abstractfactory.ModernFactory;
 import com.example.designpattern.factory3.abstractfactory.MushRoom;
+import com.example.designpattern.proxy4.Tank;
+import com.example.designpattern.proxy4.staticproxy.TankLogProxy;
+import com.example.designpattern.proxy4.staticproxy.TankTimeProxy;
 import com.example.designpattern.strategy2.Dog;
 import com.example.designpattern.strategy2.DogComparator;
 import com.example.designpattern.strategy2.Sorter;
@@ -161,5 +164,11 @@ public class MainActivity extends AppCompatActivity {
         b21.add(c212);
 
         TreePrint.print(root,0);
+
+        /**
+         * 静态代理
+         */
+
+        new TankLogProxy(new TankTimeProxy(new Tank())).move();
     }
 }
