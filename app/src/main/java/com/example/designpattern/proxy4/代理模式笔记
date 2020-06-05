@@ -1,3 +1,14 @@
-静态代理 和decorator很像
-动态代理
+静态代理 和decorator很像 static proxy
+
+
+动态代理 dynamic proxy
+无法确定具体代理的行为
+分离代理行为与被代理对象
+
+ASM 直接操作二进制字节码
+1.使用JDK的动态代理,必须实现接口
+
+2.cglib实现动态代理（生成子类）不需要接口，但不能代理final类，因为final类无法生成子类
+
+
 aop benchMark 性能

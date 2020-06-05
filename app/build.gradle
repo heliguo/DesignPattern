@@ -35,4 +35,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //cglib动态代理不需要实现接口
+    implementation 'net.sourceforge.cglib:com.springsource.net.sf.cglib:2.2.0'
+    //切面编程AOP
+    implementation 'org.aspectj:aspectjrt:1.8.13'
+
 }

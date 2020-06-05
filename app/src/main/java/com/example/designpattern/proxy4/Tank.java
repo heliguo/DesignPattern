@@ -11,6 +11,7 @@ import java.util.Random;
 public class Tank implements Moveable {
     @Override
     public void move() {
+        System.out.println("tank is moving");
 //        System.out.println(System.currentTimeMillis());
         try {
             Thread.sleep(new Random().nextInt(10000));

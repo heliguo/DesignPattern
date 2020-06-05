@@ -1,5 +1,7 @@
 package com.example.designpattern;
 
+import android.app.Application;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -44,6 +46,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    @Override
+    public Context getApplicationContext() {
+        return super.getApplicationContext();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
