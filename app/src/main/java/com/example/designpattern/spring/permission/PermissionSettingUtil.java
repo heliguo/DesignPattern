@@ -11,7 +11,7 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.example.utiltool2.BuildConfig;
+import com.example.designpattern.BuildConfig;
 
 
 /**
