@@ -1,4 +1,4 @@
 封装命令
 结合cor实现undo
 
-action traction 动作、事务
+action traction 动作、事务（回滚）
