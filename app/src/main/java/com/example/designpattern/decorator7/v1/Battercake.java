@@ -1,4 +1,4 @@
-package com.example.designpattern.decorator7;
+package com.example.designpattern.decorator7.v1;
 
 /**
  * @author lgh on 2020/5/27 20:22

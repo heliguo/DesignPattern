@@ -6,7 +6,17 @@ package com.example.designpattern.bridge16;
 class main {
 
     public static void main(String[] args) {
-        Gift gift = new ClothesGift(new Skirt());//裙子
-        Gift gift1 = new DecorateGift(new Earrings());//耳环
+        Pen smallBPen = new SmallPen();
+        smallBPen.setColor(new Blue());
+        smallBPen.draw("hahaha...");
+
+        Pen bigRPen = new BigPen();
+        bigRPen.setColor(new Red());
+        bigRPen.draw("gagaga..");
+
+        Pen middleGPen = new MiddlePen();
+        middleGPen.setColor(new Green());
+        middleGPen.draw("pupupu...");
+
     }
 }

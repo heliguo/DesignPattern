@@ -1,4 +1,6 @@
-package com.example.designpattern.decorator7;
+package com.example.designpattern.decorator7.v1;
+
+import com.example.designpattern.decorator7.v1.BattercakeAddEgg;
 
 /**
  * @author lgh on 2020/5/27 20:26

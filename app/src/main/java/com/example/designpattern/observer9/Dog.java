@@ -12,6 +12,8 @@ public class Dog implements IObserver {
 
     @Override
     public void action(WakeUpEvent event) {
+        System.out.println(event.loc);
         wang();
     }
+
 }
