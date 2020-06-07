@@ -1,0 +1,9 @@
+记录快照（瞬时状态）
+存盘
+
+对象序列化 serializable
+
+效率及选择Parcelable的性能比Serializable好，
+在内存开销方面较小，所以在内存间数据传输时推荐使用Parcelable
+
+网络序列化 用 protobuf

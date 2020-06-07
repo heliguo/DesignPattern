@@ -1,0 +1,4 @@
+创建型模式：abstract factory、builder、Factory Method、Prototype、Singleton
+结构型模式：Adapter、Bridge、Composite、Decorator、Facade、FlyWeight、Proxy
+行为模式：Chian Of Responsibility、Command、Interpreter、Iterator、Mediator、
+         Memento、Observer、State、Strategy、Template Method、Visitor
