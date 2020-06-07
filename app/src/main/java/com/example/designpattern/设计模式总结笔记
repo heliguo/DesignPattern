@@ -2,3 +2,45 @@
 结构型模式：Adapter、Bridge、Composite、Decorator、Facade、FlyWeight、Proxy
 行为模式：Chian Of Responsibility、Command、Interpreter、Iterator、Mediator、
          Memento、Observer、State、Strategy、Template Method、Visitor
+
+指导思想
+可维护性Maintainability
+  修改功能，需要修改的地方越少越好，可维护性就越高
+可复用性Reusability
+  代码可被重复使用
+  写出自己总结的类库
+可扩展性Extensibility/Scalability
+  添加功能无需修改原来的代码
+灵活性Flexibility/Mobility/adaptability
+  代码接口可以灵活调用
+
+六大设计原则：
+
+1.单一职责原则 single responsibility principle
+   负责单一的职责 Person PersonManager
+   高内聚、低耦合
+
+2.开闭原则 open-close principle
+   对扩展开发，对修改关闭
+   抽象化，多态是开闭原则的关键
+
+3.里氏替换原则 Liscov substitution principle
+   所有使用父类的地方，必须能够透明使用子类对象
+
+4.依赖倒置原则 dependency inversion principle
+   依赖抽象，而不是依赖具体
+   面向抽象（接口）编程
+
+5.接口隔离原则 Interface segregation principle
+  每一个接口应该承担独立的角色，不干不该自己干的事
+  面对使用接口的客户，只提供最小接口（没有多余的方法）
+
+6.迪米特原则 Law of demeter
+  尽量不要和陌生人说话
+  在迪米特法则中，对于一个对象，非陌生人包括以下几类
+    当前对象本身（this）
+    以参数形式传入到当前方法中的对象
+    当前对象的成员对象
+    如果当前对象的成员是一个集合，那么当前集合的元素也都是朋友
+    当前对象创建的对象
+  和其他类的耦合度变低
