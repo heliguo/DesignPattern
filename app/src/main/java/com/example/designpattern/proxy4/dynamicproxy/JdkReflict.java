@@ -16,11 +16,11 @@ public class JdkReflict {
         Tank tank = new Tank();
 
         //reflection 通过二进制字节码分析类的属性和方法
-        System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles","true");
+        //        System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles","true");
         Moveable m = (Moveable) Proxy.newProxyInstance(Tank.class.getClassLoader(),
-                new Class[]{Moveable.class}, new LogHandler(tank) );
+                new Class[]{Moveable.class}, new LogHandler(tank));
         m.move();
-}
+    }
 
     static class LogHandler implements InvocationHandler {
 

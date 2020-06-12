@@ -7,7 +7,7 @@ import java.util.List;
  * @author lgh on 2020/5/27 21:43
  * @description
  */
-public class SeverltFilterChain2  {
+public class SeverltFilterChain2 {
 
     private List<SeverltFilter2> mSeverltFilters = new ArrayList<>();
     int index = 0;

@@ -23,9 +23,9 @@ public class Child {
             }
         });
         //传入一个方法,与上面lambda一样
-        mObservers.add((event)->{
-            System.out.println("hook 函数");
-        });
+        mObservers.add((event)->
+            System.out.println("hook 函数")
+        );
     }
 
     public void wakeUp() {

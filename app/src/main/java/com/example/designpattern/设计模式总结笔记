@@ -21,7 +21,7 @@
    高内聚、低耦合
 
 2.开闭原则 open-close principle
-   对扩展开发，对修改关闭
+   对扩展开放，对修改关闭
    抽象化，多态是开闭原则的关键
 
 3.里氏替换原则 Liscov substitution principle
