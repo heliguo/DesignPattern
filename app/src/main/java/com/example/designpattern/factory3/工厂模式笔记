@@ -1,5 +1,5 @@
 1、简单工厂
-2、静态工厂
+2、静态工厂--单例
 3、工厂方法 FactoryMethod
 4、抽象工厂
 5、spring IOC

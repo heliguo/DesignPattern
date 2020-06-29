@@ -2,7 +2,7 @@ package com.example.designpattern.singleton1;
 
 /**
  * @author lgh on 2020/5/25 20:13
- * @description 双重检查，可以保证单例
+ * @description 双重检查，可以保证单例 DCL
  */
 public class Singleton06 {
 

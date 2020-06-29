@@ -1,7 +1,5 @@
 package com.example.designpattern.flyweight11;
 
-import android.os.Bundle;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,8 +20,9 @@ public class BulletPool {
     public Bullet getBullet() {
         for (int i = 0; i < mBullets.size(); i++) {
             Bullet bullet = mBullets.get(i);
-            if (!bullet.isLiving)
+            if (!bullet.isLiving) {
                 return bullet;
+            }
         }
         return new Bullet();
     }

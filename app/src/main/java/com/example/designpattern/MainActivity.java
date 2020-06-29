@@ -1,6 +1,5 @@
 package com.example.designpattern;
 
-import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,14 +11,6 @@ import com.example.designpattern.chainofresponsibility8.IFilter;
 import com.example.designpattern.chainofresponsibility8.Msg;
 import com.example.designpattern.chainofresponsibility8.NumFilter;
 import com.example.designpattern.chainofresponsibility8.SensitiveFilter;
-import com.example.designpattern.composite10.BranchNode;
-import com.example.designpattern.composite10.LeafNode;
-import com.example.designpattern.composite10.Node;
-import com.example.designpattern.composite10.TreePrint;
-import com.example.designpattern.decorator7.AbstractBattercake;
-import com.example.designpattern.decorator7.BattercakeDec;
-import com.example.designpattern.decorator7.EggBattercakeDecorator;
-import com.example.designpattern.decorator7.SausageDecorator;
 import com.example.designpattern.factory3.Car;
 import com.example.designpattern.factory3.CarFactory;
 import com.example.designpattern.factory3.Moveable;
@@ -110,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
         magicFactory.createWeapon().shoot();
 
 
-
         /**
          * 责任链模式,处理敏感词汇
          */
@@ -132,8 +122,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         FilterChain fc = new FilterChain();
-//        fc.add(new NumFilter());
-//        fc.add(new SensitiveFilter());
+        //        fc.add(new NumFilter());
+        //        fc.add(new SensitiveFilter());
         //链式调用
         fc.add(new NumFilter()).add(new SensitiveFilter());
         FilterChain fc2 = new FilterChain();
@@ -141,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
         fc.add(fc2);
 
         fc.doFilter(r);
-
 
 
         /**

@@ -10,6 +10,8 @@ import java.io.InputStreamReader;
 class FileReader {
 
     public static void main(String[] args) throws Exception {
+        BufferedReader bufferedReader = new BufferedReader(
+                new InputStreamReader(new FileInputStream("")));//装饰者模式
         FileInputStream fis = new FileInputStream("");//文件
         InputStreamReader isr = new InputStreamReader(fis);//转换器
         BufferedReader br = new BufferedReader(isr);//字节流

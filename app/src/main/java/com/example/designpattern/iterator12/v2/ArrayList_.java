@@ -4,16 +4,19 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 /**
- * author:lgh on 2020/6/6 13:51
- * 相比数组，该容器不需考虑边界问题，可动态扩展
+ * @author lgh on 2020/6/6 13:51
+ * @description 相比数组，该容器不需考虑边界问题，可动态扩展
  */
-class ArrayList_ implements Collection_ {
+public class ArrayList_ implements Collection_ {
 
     ArrayList<String> mList   = new ArrayList<>();
     Object[]          objects = new Object[10];
-    //容器下一个空的位置
+    /**
+     * 容器下一个空的位置
+     */
     private int index = 0;
 
+    @Override
     public void add(Object o) {
         if (index == objects.length) {
             Object[] newObjects = new Object[objects.length * 2];
@@ -25,6 +28,7 @@ class ArrayList_ implements Collection_ {
         index++;
     }
 
+    @Override
     public int size() {
         return index;
     }
@@ -45,8 +49,9 @@ class ArrayList_ implements Collection_ {
 
         @Override
         public Object next() {
-            if (!hasNext())
+            if (!hasNext()){
                 throw new NoSuchElementException();
+            }
             Object object = objects[currentIndex];
             currentIndex++;
             return object;
